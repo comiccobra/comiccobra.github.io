@@ -1,0 +1,108 @@
+img{
+    width: 250px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+#card{
+    /* border: 1px solid black; */
+    height: 400px;
+    width: 570px;
+    cursor: pointer;
+    position: relative;
+    perspective:1200px ;
+    -webkit-perspective: 1200px;
+    transition: 2s;   
+}
+#card:hover .outside{
+    /* z-index: 100; */
+    transform: translateX(360px);
+}
+.outside{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50.1%;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    z-index: 100;
+    transition: 4s;
+}
+.front, .back{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: rotate(0deg);
+}
+.front{
+    background-color: #be0f04;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    }
+.inside{
+    position: absolute;
+    font-family: cursive;
+    background: linear-gradient(to left,#be0f04 50%, #7d0b03);
+    height: 100%;
+    width: 50%;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    padding: 90px 10px;
+    box-shadow: 25px 25px 35px rgba 0,0,0,0,0.3;
+    line-height: 100px;
+    left: 50%;
+    transition: 4s;
+}
+.back{
+    background: linear-gradient(to right,#be0f04 50%, #7d0b03);
+    /* right: 100%; */
+    transform: rotateY(180deg);
+}
+.inside p{
+    border-bottom: 10px dotted white;
+}
+
+p{
+    font-size: 25px;
+}
+ #card:hover .inside{
+    transform: translateX(-360px);
+    transition: 4s;
+    /* z-index: 100; */
+}
+h3{
+    font-size: 30px;
+}
+.new{
+    position: absolute;
+    font-family: cursive;
+    background: linear-gradient(to left,#be0f04 50%, #7d0b03);
+    height: 100%;
+    width: 50%;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    padding: 90px 10px;
+    border: red 10px solid;
+    left: 50%;
+}
+.new p{
+    border-bottom: white dotted 10px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
