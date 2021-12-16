@@ -85,7 +85,7 @@ p{
     /* z-index: 100; */
 }
 h3{
-    font-size: 30px;
+    font-size: small;
 }
 .new{
     position: absolute;
@@ -105,4 +105,8 @@ h3{
     margin-top: 20px;
     padding-bottom: 30px;
 }
+h2{
+    font-size: small;
+}
+
 
